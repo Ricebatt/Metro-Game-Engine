@@ -83,4 +83,13 @@ namespace Metro
 	{
 		mCallbacks.keyReleasedFunc = callbackFunc;
 	}
+
+	void GLFWimplementation::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
+		mCallbacks.windowCloseFunc = callbackFunc;
+	}
+	
+	GLFWimplementation::~GLFWimplementation()
+	{
+	}
 }

@@ -25,9 +25,9 @@ namespace Metro
 		ScreenCoord mPosition;
 
 		friend class Renderer;
-		friend bool UnitsOverlap(const Unit& a, const Unit& b);
+		friend METRO_API bool UnitsOverlap(const Unit& a, const Unit& b);
 	};
 
-	bool UnitsOverlap(const Unit& a, const Unit& b);
+	METRO_API bool UnitsOverlap(const Unit& a, const Unit& b);
 
 }
