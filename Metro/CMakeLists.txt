@@ -14,6 +14,10 @@
 	src/Image.h
 	src/ImplImage.h
 	src/OpenGLCode/OpenGLImage.h
+	src/Unit.h
+	src/RendererTypes.h
+	src/MetroEvents.h
+	src/MetroKeys.h	
 )
 
 set(SOURCE_FILES
@@ -26,6 +30,8 @@ set(SOURCE_FILES
 	src/OpenGLCode/OpenGLRenderer.cpp
 	src/Image.cpp
 	src/OpenGLCode/OpenGLImage.cpp
+	src/Unit.cpp
+	src/MetroEvents.cpp	
 )
 
 add_library(Metro SHARED ${HEADER_FILES} ${SOURCE_FILES})

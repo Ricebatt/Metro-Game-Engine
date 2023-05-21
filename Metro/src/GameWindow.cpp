@@ -56,6 +56,21 @@ namespace Metro
 			delete mImplementation;
 	}
 
+	void GameWindow::SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc)
+	{
+		mImplementation->SetKeyPressedCallback(callbackFunc);
+	}
+
+	void GameWindow::SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc)
+	{
+		mImplementation->SetKeyReleasedCallback(callbackFunc);
+
+	}
+
+	void GameWindow::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
+	}
+
 	GameWindow::GameWindow()
 	{
 #ifdef METRO_GLFW

@@ -38,6 +38,17 @@ namespace Metro
 		mDefaultShader.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
 		mImplementation->Draw(image, texCoords, mDefaultShader, coords);
 	}
+
+	void Renderer::Draw(Unit& unit, Shader& shader)
+	{
+		Draw(unit.mImage, shader, unit.mPosition);
+	}
+	
+	void Renderer::Draw(Unit& unit)
+	{
+		Draw(unit.mImage, unit.mPosition);
+	}
+	
 	void Renderer::Clear()
 	{
 		mImplementation->Clear();

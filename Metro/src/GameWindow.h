@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "MetroUtil.h"
 #include "WindowImplementation.h"
+#include "MetroEvents.h"
 
 
 namespace Metro
@@ -23,6 +24,11 @@ namespace Metro
 		static int GetHeight();
 
 		~GameWindow();
+
+		void SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc);
+		void SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc);
+		void SetWindowCloseCallback(std::function<void()> callbackFunc);
+
 	private:
 		GameWindow();
 		inline static std::unique_ptr<GameWindow> mInstance{ nullptr };
