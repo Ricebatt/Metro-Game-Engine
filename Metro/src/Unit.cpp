@@ -33,6 +33,11 @@ namespace Metro
 		mPosition = newCoords;
 	}
 
+	void Unit::UpdateYVelo(int amount)
+	{
+		mPosition.yVelo += amount;
+	}
+
 	void Unit::UpdateXCoord(int amount)
 	{
 		mPosition.xCoord += amount;

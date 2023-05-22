@@ -19,13 +19,19 @@ public:
 	}
 
 	void MyKeyPressedFunc(const Metro::KeyPressed& e)
-	{
-		if (e.GetKeyCode() == METRO_KEY_RIGHT)
+	{	
+		if (e.GetKeyCode() == METRO_KEY_UP)
+		{
+			unit.UpdateYVelo(20);
+
 			unit.UpdateXCoord(20);
+		}
+
 		else if (e.GetKeyCode() == METRO_KEY_LEFT)
 			unit.UpdateYCoord(-20);
+			
 	}
-	
+
 private:
 	Metro::Renderer renderer;
 

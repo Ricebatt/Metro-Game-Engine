@@ -17,6 +17,7 @@ namespace Metro
 
 		ScreenCoord GetCoords() const;
 		void SetCoords(ScreenCoord newCoords);
+		void UpdateYVelo(int amount);
 		void UpdateXCoord(int amount);
 		void UpdateYCoord(int amount);
 

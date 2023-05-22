@@ -20,7 +20,7 @@ namespace Metro
 		int mWidth{ 0 };
 		int mHeight{ 0 };
 		int mnrChannels{ 0 };
-		unsigned char* mData{ nullptr };
+		unsigned int texture1;
 
 	};
 }

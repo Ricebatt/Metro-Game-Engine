@@ -19,9 +19,7 @@ namespace Metro
 
 
 	private:
-		std::unique_ptr<ImplShader> mImplementation{ nullptr };
-
-
+		std::unique_ptr<ImplShader> mImplementation;
 
 	};
 }

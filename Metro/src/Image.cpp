@@ -6,12 +6,20 @@ namespace Metro
 {
 	Image::Image(const std::string& imageFile)
 	{
+#ifdef METRO_OPENGL
 		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage{imageFile} };
+#else
+		#Only_OpenGL_is_implemented_at_the_moment
+#endif
 	}
 
 	Image::Image(std::string&& imageFile)
 	{
+#ifdef METRO_OPENGL
 		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage{std::move(imageFile)} };
+#else
+		#Only_OpenGL_is_implemented_at_the_moment
+#endif
 	}
 
 	void Image::Activate()
@@ -21,11 +29,11 @@ namespace Metro
 
 	int Image::GetWidth() const
 	{
-		return 0;
+		return mImplementation->GetWidth();
 	}
 
 	int Image::GetHeight() const
 	{
-		return 0;
+		return mImplementation->GetWidth();
 	}
 }

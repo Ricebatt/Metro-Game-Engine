@@ -17,6 +17,7 @@ namespace Metro
 	{
 		int xCoord{ 0 };
 		int yCoord{ 0 };
+		int yVelo{ 0 };
 
 		ScreenCoord(int x, int y) :
 			xCoord(x), yCoord(y) {};

@@ -50,7 +50,7 @@ namespace Metro
 		if (!success)
 		{
 			glGetShaderInfoLog(fragment, 1024, NULL, infoLog);
-			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type FRAGMENT:\n" << infoLog << "\n -- ----- --" << std::endl;
+			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type FRAGMENT:\n" << infoLog << "\n -- ---------------------------- --" << std::endl;
 		}
 
 
@@ -64,7 +64,7 @@ namespace Metro
 		if (!success)
 		{
 			glGetShaderInfoLog(mProgram, 1024, NULL, infoLog);
-			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type PROGRAM:\n" << infoLog << "\n -- ----- --" << std::endl; 
+			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type PROGRAM:\n" << infoLog << "\n -- ---------------------------- --" << std::endl; 
 		}
 
 		glDeleteShader(vertex);
@@ -96,7 +96,7 @@ namespace Metro
 		if (!success)
 		{
 			glGetShaderInfoLog(vertex, 1024, NULL, infoLog);
-			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type VERTEX:\n" << infoLog << "\n -- ----- --" << std::endl;
+			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type VERTEX:\n" << infoLog << "\n -- ---------------------------- --" << std::endl;
 		}
 
 		std::string fShader;
@@ -118,7 +118,7 @@ namespace Metro
 		if (!success)
 		{
 			glGetShaderInfoLog(fragment, 1024, NULL, infoLog);
-			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type FRAGMENT:\n" << infoLog << "\n -- ----- --" << std::endl;
+			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type FRAGMENT:\n" << infoLog << "\n -- ---------------------------- --" << std::endl;
 		}
 
 
@@ -132,7 +132,7 @@ namespace Metro
 		if (!success)
 		{
 			glGetShaderInfoLog(mProgram, 1024, NULL, infoLog);
-			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type PROGRAM:\n" << infoLog << "\n -- ----- --" << std::endl;
+			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type PROGRAM:\n" << infoLog << "\n -- ---------------------------- --" << std::endl;
 		}
 
 		glDeleteShader(vertex);
