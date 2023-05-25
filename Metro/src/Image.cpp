@@ -36,4 +36,6 @@ namespace Metro
 	{
 		return mImplementation->GetWidth();
 	}
+
+
 }

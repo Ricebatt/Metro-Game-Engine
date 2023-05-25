@@ -13,29 +13,50 @@ public:
 
 	virtual void OnUpdate() override
 	{
+		
+		dino.UpdateYCoord(dino.GetVelo());
+
+		if (dino.GetCoords().yCoord >= 90)
+		{
+			dino.UpdateYVelo(-2);
+		}
+		else
+		{
+			dino.SetVelo(0);
+			dino.SetCoords({ 100,90 });
+		}
+
+		if (cactus.GetCoords().xCoord >= 10)
+		{
+			cactus.UpdateXCoord(-5);
+		}
+		else
+		{
+			cactus.SetCoords({ 300,90 });
+		}
+		
+
+
 		renderer.Clear();
 		renderer.Draw(back, { 0,0 });
-		renderer.Draw(unit);
+		renderer.Draw(dino);
+		renderer.Draw(cactus);
 	}
 
 	void MyKeyPressedFunc(const Metro::KeyPressed& e)
 	{	
 		if (e.GetKeyCode() == METRO_KEY_UP)
 		{
-			unit.UpdateYVelo(20);
-
-			unit.UpdateXCoord(20);
+			dino.SetVelo(20);
 		}
-
-		else if (e.GetKeyCode() == METRO_KEY_LEFT)
-			unit.UpdateYCoord(-20);
 			
 	}
 
 private:
 	Metro::Renderer renderer;
 
-	Metro::Unit unit{ "../Assets/Images/test.png", {100,100} };
+	Metro::Unit dino{ "../Assets/Images/test.png", {100,90} };
+	Metro::Unit cactus{ "../Assets/Images/cactus.png", {300,90} };
 	Metro::Image back{ "../Assets/Images/back.png" };
 };
 

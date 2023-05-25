@@ -1,8 +1,8 @@
 #version 330 core
-layout(location = 0) in vex2 aPos;
-layout(location = 1) in vex2 aTex;
+layout(location = 0) in vec2 aPos;
+layout(location = 1) in vec2 aTex;
 
-out vex2 texCoord;
+out vec2 texCoord;
 uniform vec2 screenSize;
 
 void main()

@@ -18,6 +18,7 @@ namespace Metro
 		int GetHeight() const;
 
 
+
 	private:
 		std::unique_ptr<ImplImage> mImplementation;
 

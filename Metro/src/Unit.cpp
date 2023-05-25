@@ -23,6 +23,11 @@ namespace Metro
 		return mImage.GetHeight();
 	}
 
+	int Unit::GetVelo() const
+	{
+		return mVelo;
+	}
+
 	ScreenCoord Unit::GetCoords() const
 	{
 		return mPosition;
@@ -33,9 +38,14 @@ namespace Metro
 		mPosition = newCoords;
 	}
 
+	void Unit::SetVelo(int amount)
+	{
+		mVelo = amount;
+	}
+
 	void Unit::UpdateYVelo(int amount)
 	{
-		mPosition.yVelo += amount;
+		mVelo += amount;
 	}
 
 	void Unit::UpdateXCoord(int amount)
