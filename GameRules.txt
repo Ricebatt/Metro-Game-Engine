@@ -1,0 +1,6 @@
+This game is a simple version of the no internet google game
+
+press up arrow key to jump
+press down arrow key to instantly start quickly falling
+
+the goal is to avoid incoming birds and cacti
