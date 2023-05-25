@@ -34,7 +34,7 @@ namespace Metro
 
 	int Image::GetHeight() const
 	{
-		return mImplementation->GetWidth();
+		return mImplementation->GetHeight();
 	}
 
 
