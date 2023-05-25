@@ -1,6 +1,7 @@
 #include "Metro.h"
 #include <iostream>
 #include <functional>
+#include <random>
 
 class Met_Game_App : public Metro::MetroApp
 {
