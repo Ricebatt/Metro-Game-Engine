@@ -47,16 +47,22 @@ public:
 	{	
 		if (e.GetKeyCode() == METRO_KEY_UP)
 		{
-			dino.SetVelo(20);
+			dino.SetVelo(30);
+		}	
+		if (e.GetKeyCode() == METRO_KEY_DOWN)
+		{
+			dino.SetVelo(-10);
 		}
-			
 	}
+
+
 
 private:
 	Metro::Renderer renderer;
 
-	Metro::Unit dino{ "../Assets/Images/test.png", {100,90} };
+	Metro::Unit dino{ "../Assets/Images/dino.png", {100,90} };
 	Metro::Unit cactus{ "../Assets/Images/cactus.png", {300,90} };
+	Metro::Unit bird{ "../Assets/Images/bird.png", {300,200} };
 	Metro::Image back{ "../Assets/Images/back.png" };
 };
 

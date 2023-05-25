@@ -16,7 +16,7 @@ namespace Metro
 	MetroApp::MetroApp()
 	{
 		GameWindow::Init();
-		GameWindow::CreateWindow(1200, 500, "game");
+		GameWindow::CreateWindow(1000, 417, "game");
 
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
 	}
